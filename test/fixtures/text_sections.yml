@@ -20,14 +20,10 @@
 #  index_text_sections_on_section_id  (section_id)
 #
 
-<%
-require 'ffaker'
-%>
-
 text_section:
   section: section_for_text
-  content: <%= Faker::Lorem.paragraph %>
-  font: <%= Faker::Lorem.word %>
+  content: <%= FFaker::Lorem.paragraph %>
+  font: <%= FFaker::Lorem.word %>
   font_size: <%= rand(2..40) %>
   red:  <%= rand(0..255) %>
   green:  <%= rand(0..255) %>
@@ -37,8 +33,8 @@ text_section:
 
 other_text_section:
   section:
-  content: <%= Faker::Lorem.paragraph %>
-  font: <%= Faker::Lorem.word %>
+  content: <%= FFaker::Lorem.paragraph %>
+  font: <%= FFaker::Lorem.word %>
   font_size: <%= rand(2..40) %>
   red:  <%= rand(0..255) %>
   green:  <%= rand(0..255) %>

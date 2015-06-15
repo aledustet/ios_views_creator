@@ -18,37 +18,20 @@
 #  index_sections_on_view_id  (view_id)
 #
 
-<%
-require "ffaker"
-  for i in (1 .. 8) do
-    width = rand(0..320)
-    height = rand(0..480)
-%>
-
-section_<%= i %>:
-  section_index: <%= rand(1..10) %>
-  x: <%= rand(1..width) %>
-  y: <%= rand(1..height) %>
-  width: <%= width %>
-  height: <%= height %>
-  section_type: <%= rand(0..1)%>
-  view: view
-<% end %>
-
 section_for_image:
   section_index: <%= rand(1..10) %>
-  x: <%= rand(1..width) %>
-  y: <%= rand(1..height) %>
-  width: <%= width %>
-  height: <%= height %>
+  x: <%= rand(0..320) %>
+  y: <%= rand(0..480) %>
+  width: <%= rand(0..320) %>
+  height: <%= rand(0..480) %>
   section_type: 0
-  view: view
+  view: :view
 
 section_for_text:
   section_index: <%= rand(1..10) %>
-  x: <%= rand(1..width) %>
-  y: <%= rand(1..height) %>
-  width: <%= width %>
-  height: <%= height %>
+  x: <%= rand(0..320) %>
+  y: <%= rand(0..480) %>
+  width: <%= rand(0..320) %>
+  height: <%= rand(0..480) %>
   section_type: 1
-  view: view
+  view: :view

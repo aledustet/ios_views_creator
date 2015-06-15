@@ -10,6 +10,3 @@
 
 view:
   view_index: <%= rand(0..1000) %>
-
-view_invalid:
-  view_index: -1

@@ -46,9 +46,9 @@ class SectionTest < ActiveSupport::TestCase
     @section_text.height = nil
     assert_not @section_text.valid?
     @section_text.height = @section_image.height
-    @section_text.article = nil
+    @section_text.view = nil
     assert_not @section_text.valid?
-    @section_text.article = articles(:article_valid2)
+    @section_text.view = views(:view)
     @section_text.section_type = nil
     assert_not @section_text.valid?
     @section_text.section_type = @section_image.section_type
@@ -77,7 +77,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "validates section_type correctly" do
-    @section_text.section_type = 2
+    @section_text.section_type = -1
     assert_not @section_text.valid?
   end
 

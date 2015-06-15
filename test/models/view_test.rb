@@ -21,11 +21,12 @@ class ViewTest < ActiveSupport::TestCase
   end
 
   test "haves a 'valid' invalid fixture" do
-    assert_not view(:view_invalid).valid?
+    @view.view_index = -1
+    assert_not @view.valid?
   end
 
   test "haves it's sections" do
-    assert (@view.sections.count == 5)
+    assert (@view.sections.count == 2)
   end
 
 end

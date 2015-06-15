@@ -19,4 +19,10 @@
 #
 
 class Section < ActiveRecord::Base
+  has_many :image_sections
+  has_many :text_sections
+  belongs_to :view
+  validates :x, :y, :width, :height, :section_type, :view, presence: true
+  validates :x, :y, :section_index, :section_type, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :width, :height, numericality: { only_integer: true, greater_than: 0 }
 end

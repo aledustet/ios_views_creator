@@ -21,4 +21,19 @@
 #
 
 class TextSection < ActiveRecord::Base
+  belongs_to :section
+  validates :section, :content, presence: true
+  validates :section, uniqueness: true
+
+  after_initialize :init
+
+  def init
+    self.font  ||= "Helvetica"
+    self.font_size ||= 12
+    self.red ||= 0
+    self.green ||= 0
+    self.blue ||= 0
+    self.alignment ||= 0
+    self.scrollable ||= false
+  end
 end

@@ -14,16 +14,12 @@
 #  index_image_sections_on_section_id  (section_id)
 #
 
-<%
-require 'ffaker'
-%>
-
 image_section:
-  section: section_for_image
-  image_name: <%= Faker::Product.brand %>
-  image: <%= Faker::Product.name %>
+  section: :section_for_image
+  image_name: <%= FFaker::Product.brand %>
+  image: <%= FFaker::Product.name %>
 
 other_image_section:
-  section:
-  image_name: <%= Faker::Product.brand %>
-  image: <%= Faker::Product.name %>
+  section_id:
+  image_name: <%= FFaker::Product.brand %>
+  image: <%= FFaker::Product.name %>

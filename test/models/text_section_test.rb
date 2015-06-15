@@ -39,14 +39,6 @@ class TextSectionTest < ActiveSupport::TestCase
     prev = @text_section.content
     @text_section.content = nil
     assert_not @text_section.valid?
-    @text_section.content = prev
-    prev = @text_section.font
-    @text_section.font = nil
-    assert_not @text_section.valid?
-    @text_section.font = prev
-    prev = @text_section.font_size
-    @text_section.font_size = nil
-    assert_not @text_section.valid?
   end
 
   test "doesn't allow duplicate section values" do

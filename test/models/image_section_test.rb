@@ -17,8 +17,9 @@
 require 'test_helper'
 
 class ImageSectionTest < ActiveSupport::TestCase
+
   def setup
-    @image_section = image_sections(:image_section_valid)
+    @image_section = image_sections(:image_section)
   end
 
   test "haves a valid factory" do
@@ -29,14 +30,6 @@ class ImageSectionTest < ActiveSupport::TestCase
     prev = @image_section.section
     @image_section.section = nil
     assert_not @image_section.valid?
-    # @image_section.section = prev
-    # prev = @image_section.image_name
-    # @image_section.image_name = nil
-    # assert_not @image_section.valid?
-    # @image_section.image_name = prev
-    # prev = @image_section.image
-    # @image_section.image = nil
-    # assert_not @image_section.valid?
   end
 
   test "doesn't allow duplicate section values" do

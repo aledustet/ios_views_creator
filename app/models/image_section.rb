@@ -15,4 +15,7 @@
 #
 
 class ImageSection < ActiveRecord::Base
+  belongs_to :section
+  validates :section, presence: true
+  validates :section, uniqueness: true
 end
