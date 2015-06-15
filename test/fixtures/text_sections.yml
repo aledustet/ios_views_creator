@@ -1,0 +1,43 @@
+# == Schema Information
+#
+# Table name: text_sections
+#
+#  id         :integer          not null, primary key
+#  section_id :integer
+#  content    :text
+#  font       :string
+#  font_size  :integer
+#  red        :integer
+#  green      :integer
+#  blue       :integer
+#  alignment  :integer
+#  scrollable :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_text_sections_on_section_id  (section_id)
+#
+
+text_section:
+  section: section_for_text
+  content: <%= FFaker::Lorem.paragraph %>
+  font: <%= FFaker::Lorem.word %>
+  font_size: <%= rand(2..40) %>
+  red:  <%= rand(0..255) %>
+  green:  <%= rand(0..255) %>
+  blue: <%= rand(0..255) %>
+  alignment:  <%= rand(0..4) %>
+  scrollable: false
+
+other_text_section:
+  section:
+  content: <%= FFaker::Lorem.paragraph %>
+  font: <%= FFaker::Lorem.word %>
+  font_size: <%= rand(2..40) %>
+  red:  <%= rand(0..255) %>
+  green:  <%= rand(0..255) %>
+  blue: <%= rand(0..255) %>
+  alignment:  <%= rand(0..4) %>
+  scrollable: false
