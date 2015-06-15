@@ -1,28 +1,21 @@
-== README
+=== About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend for a demo app on my [blog post](http://aledustet.com/development/custom-views-creator-for-ios/).
 
-Things you may want to cover:
+It is a Rails for creating ios views and exporting the data to recreate the exact views on an iOS App.
 
-* Ruby version
+Contributing
+------------
 
-* System dependencies
+If you'd like to contribute a feature or bugfix: Thanks! To make sure your
+fix/feature has a high chance of being included, please read the following
+guidelines:
 
-* Configuration
+1. Post a [pull request](https://github.com/aledustet/ios_views_creator/compare/).
+2. Or open a [GitHub issue](https://github.com/aledustet/ios_views_creator/issues/new).
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License
+-------
+Copyright © 2015 aledustet, released under the New BSD License.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

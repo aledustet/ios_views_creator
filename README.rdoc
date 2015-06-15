@@ -1,5 +1,0 @@
-# About
-
-This is the sample code for a dynamic views creator for an iOS App. It is purely for instructing purposes. The Details are available on [my blog post](http://aledustet.com/development/custom-views-creator-for-ios/).
-
-Feel free to contribute :)
