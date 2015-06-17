@@ -41,3 +41,7 @@ other_text_section:
   blue: <%= rand(0..255) %>
   alignment:  <%= rand(0..4) %>
   scrollable: false
+
+uninitialized_text_section:
+  section:
+  content: <%= FFaker::Lorem.paragraph %>
