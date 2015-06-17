@@ -46,4 +46,9 @@ class TextSectionTest < ActiveSupport::TestCase
     text_sec.section = @text_section.section
     assert_not text_sec.valid?
   end
+
+  test "initializes the omited values with defaults" do
+    text_section = text_sections(:uninitialized_text_section)
+    assert (text_section.font_size == 12)
+  end
 end
