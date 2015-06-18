@@ -86,4 +86,10 @@ class SectionTest < ActiveSupport::TestCase
     assert_not @section_text.valid?
   end
 
+  test "a minion object exists on the right table" do
+    text_section = TextSection.find_by_section_id(@section_text.id)
+    image_section = ImageSection.find_by_section_id(@section_text.id)
+    assert (!text_section.nil? and image_section.nil?)
+  end
+
 end

@@ -24,6 +24,9 @@ class TextSection < ActiveRecord::Base
   belongs_to :section
   validates :section, :content, presence: true
   validates :section, uniqueness: true
+  validates :red, :green, :blue, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 255 }
+  validates :font_size, numericality: { only_integer: true, greater_than_or_equal_to: 1}
+  validates :alignment, numericality: { only_integer: true, greater_than_or_equal_to: 0}
 
   after_initialize :init
 
